@@ -1,4 +1,9 @@
-const url = process.env.REACT_APP_URL ? process.env.REACT_APP_URL : 'http://localhost:8082/';
+// This env var is stored in .env and is set at build time
+// it cannot be passed in to the container via yaml, as react produces static content
+// edit the .env file to set the value to http://IP.Address/ - where IP.Address
+// is the  external IP of your API service
+// NB. Your service type will need to be LoadBalancer, not ClusterIP, if you are using AJAX
+const url = process.env.REACT_APP_URL;
 
 const headers = {
     accept: 'application/json',
