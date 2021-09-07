@@ -3,7 +3,7 @@
 // edit the .env file to set the value to http://IP.Address/ - where IP.Address
 // is the  external IP of your API service
 // NB. Your service type will need to be LoadBalancer, not ClusterIP, if you are using AJAX
-const url = process.env.REACT_APP_URL;
+const url = process.env.REACT_APP_SERVER;
 
 const headers = {
     accept: 'application/json',
